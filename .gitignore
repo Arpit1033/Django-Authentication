@@ -1,1 +1,74 @@
+# Frontend
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Backend
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
 env/
+
+# Django stuff
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment variables
+.env
+*.env
+
+# Static and media files (if generated dynamically)
+staticfiles/
+media/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Migrations (optional, if you don't want to track them)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# VS Code and JetBrains IDEs
+.vscode/
+.idea/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Pipenv / Poetry
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Docker
+*.pid
