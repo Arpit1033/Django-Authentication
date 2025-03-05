@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from decouple import config
 
@@ -82,7 +83,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "authDB",
         "USER": config('POSTGRESQL_USER', default = ''),
-        "PASSWORD": config('POSTGRESQL_PASSWORD', default = '')
+        "PASSWORD": config('POSTGRESQL_PASSWORD', default = ''),
         "HOST": config('POSTGRESQL_HOST', default = '')
     }
 }
@@ -165,4 +166,9 @@ DJOSER = {
     'USERNAME_RESET_CONFIRM_URL': 'email/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
+    'SERIALIZERS': {
+        'user_create': 'accounts.serializers.UserCreateSerializer',
+        'user': 'accounts.serializers.UserCreateSerializer',
+        'user_delete': 'accounts.serializers.UserDeleteSerializer',
+    }
 }
